@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test git </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
+<title>Test git </title>
+<style>
+    span {
+        color: rgb(80, 101, 234)
+    }
+    p {
+        font-weight: 600;
+    }
+</style>
+</head>
+
 <body>
     <section>
         <div class="setup">
-            <h4>install git</h4>
+            <h4 class="text-center my-4">Install gitflow</h4>
 
-            <p>git pull after updating data from branch develop</p>
-
-            <p>Pulled develop</p>
-            <p>local : git branch -d  name branch</p>
-            <p>remote: git push --delete name remote branch</p>
-            <p>git fetch --all --prune : delete changes in local and remote branch</p>
-            <p>PUBLISH BRANCH: git add and git commit <span>git flow feature gitflow branch name</span> </p>
-            <p> remove commit : git cherry-pick name commit </p>
-            <p>pull another branch: quit current branch, back develop branch and pull </p>
-            <p>git flow feature pull origin name branch</p>
+            <p>Any update from develop branch, you need to <span>git pull</span> before <span>git push</span></p>
+            <p>Delete local branch : <span>git branch -d name_branch</span></p>
+            <p>Delete remote branch : <span>git push --delete name name_remote_branch</span></p>
+            <p>Delete changes in local and remote branch <span>git fetch --all --prune</span></p>
+            <p>PUBLISH BRANCH from local to remote: <span>git add</span> and <span>git commit</span>
+                then <span>git flow feature gitflow name_branch</span> </p>
+            <p> remove commit : <span>git cherry-pick name commit</span> </p>
+            <p>Fetch remote branch which doesn't exist in local. You need to quit current branch, go back develop branch
+                and <span>git flow feature pull origin name_branch</span> </p>
+            <p>Create a feature branch: <span>git flow feature start feature_branch</span></p>
+            <p>When finish the feature branch and you will merge this feature into develop branch <span>git flow feature
+                    finish feature_branch</span></p>
         </div>
     </section>
 </body>
+
 </html>
